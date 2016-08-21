@@ -1,5 +1,5 @@
-Feature: Search, Add and Edit Actions on Amazon
- 	As an Amazon user, I want to be able to add and edit an item in the basket
+Feature: Search, Add and Edit item on Amazon
+ 	As an Amazon user, when I add an item to the basket, I am able to see the item details in the basket
  
 Scenario: Open Amazon Page
 	Given Browser is open
@@ -14,14 +14,14 @@ Scenario: Search book
   And first item has the title "A Game of Thrones (A Song of Ice and Fire, Book 1)"
 	And badge is "#1 Best Seller"
 	And Selected type is "Paperback"
-  And price is "£4.00"
+  And price is "Â£4.00"
 
 Scenario: Verify book details of Game of Thrones
 	Given first item has the title "A Game of Thrones (A Song of Ice and Fire, Book 1)"
 	When I navigate to the book details
 	Then title is shown as "A Game of Thrones (A Song of Ice and Fire, Book 1)"
   And badge is "Best Seller"
-	And price is "£4.00"
+	And price is "Â£4.00"
 	And type is "Paperback" 
 	
 Scenario: Add book to the basket
@@ -38,7 +38,7 @@ Scenario: Edit the basket
   Then "A Game of Thrones (A Song of Ice and Fire, Book 1)" is shown on the list
 	And title is shown as "A Game of Thrones (A Song of Ice and Fire, Book 1)" 
 	And type is "Paperback"
-	And price is "£4.00" 
+	And price is "Â£4.00" 
 	And quantity is "1"
-	And total price is "Subtotal (1 item): £4.00"
+	And total price is "Subtotal (1 item): Â£4.00"
 
